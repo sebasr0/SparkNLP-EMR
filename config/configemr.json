@@ -1,0 +1,61 @@
+[
+  {
+    "Classification": "jupyter-s3-conf",
+    "Properties": {
+      "s3.persistence.enabled": "true",
+      "s3.persistence.bucket": "bucketspark14"
+    }
+  },
+  {
+    "Classification": "hadoop-env",
+    "Configurations": [
+      {
+        "Classification": "export",
+        "Properties": {
+          "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+        }
+      }
+    ],
+    "Properties": {}
+  },
+  {
+    "Classification": "spark-env",
+    "Configurations": [
+      {
+        "Classification": "export",
+        "Properties": {
+          "JAVA_HOME": "/usr/lib/jvm/java-1.8.0",
+          "PYSPARK_PYTHON": "/usr/bin/python3"
+        }
+      }
+    ],
+    "Properties": {}
+  },
+  {
+    "Classification": "yarn-env",
+    "Configurations": [
+      {
+        "Classification": "export",
+        "Properties": {}
+      }
+    ],
+    "Properties": {}
+  },
+  {
+    "Classification": "spark-defaults",
+    "Properties": {
+      "spark.driver.memory": "7g",
+      "spark.executor.memory": "7g",
+      "spark.driver.memoryOverhead": "1g",
+      "spark.executor.memoryOverhead": "1g",
+      "spark.executor.cores": "2",
+      "spark.driver.maxResultSize": "0",
+      "spark.jars.packages": "com.johnsnowlabs.nlp:spark-nlp_2.12:5.5.0",
+      "spark.kryoserializer.buffer.max": "2000M",
+      "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+      "spark.yarn.am.waitTime": "500s",
+      "spark.yarn.preserve.staging.files": "true",
+      "spark.yarn.stagingDir": "hdfs:///tmp"
+    }
+  }
+]
