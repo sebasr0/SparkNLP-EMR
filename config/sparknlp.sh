@@ -10,6 +10,10 @@ export SPARK_HOME=/usr/lib/spark' >> $HOME/.bashrc && source $HOME/.bashrc
 sudo yum update -y
 sudo yum install -y python3-devel gcc
 
+# Install the s3fs dependency for EMR Notebooks magics 
+sudo amazon-linux-extras install epel -y
+sudo yum install s3fs-fuse -y
+
 # Actualizar pip para Python 3
 sudo python3 -m pip install --upgrade pip
 

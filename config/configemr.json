@@ -42,20 +42,15 @@
     "Properties": {}
   },
   {
-    "Classification": "livy-conf",
-    "Properties": {
-      "livy.server.session.timeout": "4h",
-      "livy.server.yarn.app-lookup-timeout": "500s"
-    }
+    "classification":"livy-conf",
+        "Properties":{
+            "livy.server.session.timeout":"6h",
+            "livy.spark.deploy-mode":"cluster"
+        }
   },
   {
     "Classification": "spark-defaults",
     "Properties": {
-      "spark.driver.memory": "7g",
-      "spark.executor.memory": "7g",
-      "spark.driver.memoryOverhead": "1g",
-      "spark.executor.memoryOverhead": "1g",
-      "spark.executor.cores": "2",
       "spark.driver.maxResultSize": "0",
       "spark.jars.packages": "com.johnsnowlabs.nlp:spark-nlp_2.12:5.5.0",
       "spark.kryoserializer.buffer.max": "2000M",
