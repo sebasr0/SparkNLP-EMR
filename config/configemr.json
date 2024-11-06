@@ -12,7 +12,7 @@
       {
         "Classification": "export",
         "Properties": {
-          "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          "JAVA_HOME": "/usr/lib/jvm/jre-11"
         }
       }
     ],
@@ -24,7 +24,7 @@
       {
         "Classification": "export",
         "Properties": {
-          "JAVA_HOME": "/usr/lib/jvm/java-1.8.0",
+          "JAVA_HOME": "/usr/lib/jvm/jre-11",
           "PYSPARK_PYTHON": "/usr/bin/python3"
         }
       }
@@ -40,6 +40,13 @@
       }
     ],
     "Properties": {}
+  },
+  {
+    "Classification": "livy-conf",
+    "Properties": {
+      "livy.server.session.timeout": "4h",
+      "livy.server.yarn.app-lookup-timeout": "500s"
+    }
   },
   {
     "Classification": "spark-defaults",
